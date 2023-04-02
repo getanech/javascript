@@ -1,0 +1,19 @@
+<head>
+    <html>
+    <script>
+        function calc(x, y, siman) {
+            s = x * y;
+            switch (siman){
+                case 'p':return x+y;break;
+                case 'm':return x-y;break;
+                case 'k':return x*y;break;
+                case 'd':return x/y;break;
+            }
+
+            return s;
+        }
+        document.write(calc(3, 12, 'p'))
+        document.write("<br>",calc(3, 12, 'm'))
+        document.write("<br>",calc(3, 12, 'k'))
+        document.write("<br>",calc(3, 12, 'd'))
+    </script>

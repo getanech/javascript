@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+</body>
+</html>
+<script>
+  function isPrime(num) {
+    if (num < 2) {
+      return false;
+    }
+    for (var i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  const arr = [];
+  const n = 10;
+
+  for (let i = 0; i < n; i++) {
+    arr.push(Math.floor(Math.random() * 901) + 100);
+  }
+
+  let countPrimes = 0;
+  let countNonPrimes = 0;
+
+  for (let i = 0; i < n; i++) {
+    if (isPrime(arr[i])) {
+      countPrimes++;
+    } else {
+      countNonPrimes++;
+    }
+  }
+
+  document.write(`Number of primes: ${countPrimes}`);
+  document.write(`Number of non-primes: ${countNonPrimes}`);
+
+</script>
